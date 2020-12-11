@@ -3,7 +3,7 @@
 #!system=ios
 
 [MITM]
-hostname =  %APPEND% api.bilibili.com,weather-data.apple.com,draw.jdfcloud.com,jdjoy.jd.com,api.m.jd.com,trade-acs.m.taobao.com,biz.caiyunapp.com,api.weather.com,sub.store,
+hostname =  %APPEND% h5.youzan.com, api.bilibili.com,weather-data.apple.com,draw.jdfcloud.com,jdjoy.jd.com,api.m.jd.com,trade-acs.m.taobao.com,biz.caiyunapp.com,api.weather.com,sub.store,
 
 [Script]
 #👉👉👉👉👉Task脚本
