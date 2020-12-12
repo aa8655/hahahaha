@@ -2,7 +2,7 @@
 #!desc=Cookie 获取成功后可禁用此模块
 #!system=ios
 [MITM]
-hostname = %APPEND% api.m.jd.com, mqqapi.reader.qq.com, commontgw6.reader.qq.com, eventv3.reader.qq.com, *.bilibili.com, glados.rocks, account.huami.com,ifac*.iqiyi.com,
+hostname = %APPEND% h5.youzan.com, api.m.jd.com, mqqapi.reader.qq.com, commontgw6.reader.qq.com, eventv3.reader.qq.com, *.bilibili.com, glados.rocks, account.huami.com,ifac*.iqiyi.com,
 
 [Script]
 
