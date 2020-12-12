@@ -1,6 +1,6 @@
 {
      "name": "for-own-use",
-    "description": "https://",
+    "description": "https://github.com/aa8655/hahahaha/blob/main/quanX/gallery/task.json",
     "task": [
         "30 9 0 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_health.js, tag=健康抽奖机, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_health.png, enabled=true"
         "0 13 9 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_rankingList.js, tag=排行榜, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_bean_home.png, enabled=true"
