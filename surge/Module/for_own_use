@@ -3,7 +3,7 @@
 #!system=ios
 
 [MITM]
-hostname =  %APPEND% h5.youzan.com, api.bilibili.com,weather-data.apple.com,draw.jdfcloud.com,jdjoy.jd.com,api.m.jd.com,trade-acs.m.taobao.com,biz.caiyunapp.com,api.weather.com,sub.store,
+hostname =  %APPEND% h5.youzan.com, api.bilibili.com,weather-data.apple.com,draw.jdfcloud.com,jdjoy.jd.com,api.m.jd.com,trade-acs.m.taobao.com,biz.caiyunapp.com,api.weather.com,sub.store, weixin110.qq.com
 
 [Script]
 #👉👉👉👉👉Task脚本
@@ -20,6 +20,8 @@ B站 = type=cron,cronexp=20 1 8 * * *,script-path=https://raw.githubusercontent.
 #
 GLaDOS签到 = type=cron,cronexp=5 8 * * *,script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/glados/glados.js,script-update-interval=0
 #👉👉👉👉👉功能类脚本
+#微信链接跳转
+tbopener.js = type=http-response,pattern=^https?:\/\/weixin110\.qq\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi,script-path=https://raw.githubusercontent.com/HotKids/Rules/master/Script/weixin110.js
 # B站解锁高清
 B站 = type=http-response,pattern=https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Script/Bilibili/BiliHD.js,script-update-interval=0
 # 京东比价（内置版）
