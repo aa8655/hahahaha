@@ -8,6 +8,8 @@ hostname =  %APPEND% h5.youzan.com, api.bilibili.com,draw.jdfcloud.com,jdjoy.jd.
 [Script]
 #👉👉👉👉👉Task脚本
 #
+小米运动 = type=cron,cronexp="15 17 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/backUp/xmSports.js
+#
 墨迹天气 = type=cron,cronexp=10 8-22/2 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/aa8655/hahahaha/main/surge/moji.js,script-update-interval=0
 #
 京东价格提醒 = type=cron,cronexp="5 10 * * *",script-path=https://raw.githubusercontent.com/toulanboy/scripts/master/jd_price_detect/jd_price_detect.js,wake-system=true,timeout
