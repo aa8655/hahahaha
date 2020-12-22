@@ -25,3 +25,7 @@ Bilibili获取Cookie = type=http-request,pattern=^https:\/\/(www|live)\.bilibili
 企鹅读书获取更新body = type=http-request,pattern=https:\/\/mqqapi\.reader\.qq\.com\/log\/v4\/mqq\/track,script-path=https://raw.githubusercontent.com/ziye12/JavaScript/master/Task/qqreads.js
 #企鹅读书获取时长cookie
 企鹅读书获取时长cookie = type=http-request,pattern=https:\/\/mqqapi\.reader\.qq\.com\/mqq\/addReadTimeWithBid?,script-path=https://raw.githubusercontent.com/ziye12/JavaScript/master/Task/qqreads.js
+#QQ阅读APP获取cookie
+QQ阅读APP获取cookie = type=https:\/\/commontgw6\.reader\.qq\.com\/v7_5_2\/nativepage\/getAcctInfo,script-path=https://raw.githubusercontent.com/ziye12/JavaScript/master/Task/QQreads.js
+#QQ阅读APP获取视频cookie
+QQ阅读APP获取视频cookie = https:\/\/eventv36\.reader\.qq\.com\/activity\/pkg11955\/watchVideo,script-path=https://raw.githubusercontent.com/ziye12/JavaScript/master/Task/QQreads.js
