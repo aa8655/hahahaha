@@ -3,7 +3,7 @@
 #!system=ios
 
 [MITM]
-hostname =  %APPEND% h5.youzan.com, api.bilibili.com,draw.jdfcloud.com,jdjoy.jd.com,api.m.jd.com,trade-acs.m.taobao.com,sub.store, weixin110.qq.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, www.zhihu.com,api.zhihu.com,zhuanlan.zhihu.com,appcloud2.zhihu.com
+hostname =  %APPEND% h5.youzan.com, api.bilibili.com,draw.jdfcloud.com,jdjoy.jd.com,api.m.jd.com,trade-acs.m.taobao.com,sub.store,weixin110.qq.com,api.weibo.cn,mapi.weibo.com,*.uve.weibo.com,www.zhihu.com,api.zhihu.com,zhuanlan.zhihu.com,appcloud2.zhihu.com,homepage-api.smzdm.com,haojia-api.smzdm.com,article-api.smzdm.com,haojia.m.smzdm.com,app-api.smzdm.com,s-api.smzdm.com
 
 [Script]
 #👉👉👉👉👉Task脚本
@@ -18,6 +18,12 @@ B站 = type=cron,cronexp=20 1 8 * * *,script-path=https://raw.githubusercontent.
 #
 GLaDOS签到 = type=cron,cronexp=5 8 * * *,script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/glados/glados.js,script-update-interval=0
 #👉👉👉👉👉功能类脚本
+#什么值得买
+什么值得买_首页去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/homepage-api\.smzdm\.com\/home,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.js
+什么值得买_去浮动广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/app-api\.smzdm\.com\/util\/update,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.js
+什么值得买_好价去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/haojia-api\.smzdm\.com\/home\/list\?,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.js
+什么值得买_好文去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/article-api\.smzdm\.com\/article\/index_home_page,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.js
+什么值得买_搜索去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/s-api\.smzdm\.com\/sou\/list,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.js
 #知乎
 知乎_处理用户信息 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.zhihu\.com\/people\/,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js
 知乎_信息流去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.zhihu\.com\/(moments|topstory)(\/|\?)?(recommend|action=|feed_type=)(?!\/people),script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js
@@ -49,3 +55,8 @@ Sub-Store = type=http-request,pattern=^https?:\/\/sub\.store,script-path=https:/
 [Rule]
 # 知乎广告拦截
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_remove_ads.list,REJECT
+[URL Rewrite]
+#什么值得买
+^https?:\/\/haojia\.m\.smzdm\.com\/detail_modul\/banner - reject
+^https?:\/\/api\.smzdm\.com\/v\d\/util\/(banner|loading) - reject
+^https?:\/\/app-api\.smzdm\.com\/util\/loading - reject
